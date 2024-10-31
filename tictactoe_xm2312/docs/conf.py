@@ -3,7 +3,11 @@
 # This file only contains a selection of the most common options. For a full
 # list see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
+import os
+import sys
 
+# Add the project's src directory to sys.path
+sys.path.insert(0, os.path.abspath('../src'))
 # -- Project information -----------------------------------------------------
 
 project = u"tictactoe_xm2312"
@@ -18,8 +22,11 @@ author = u"XuanYing Mao"
 extensions = [
     "myst_nb",
     "autoapi.extension",
+    "sphinx.ext.autodoc",
     "sphinx.ext.napoleon",
     "sphinx.ext.viewcode",
+    "myst_nb",
+    "autoapi.extension",
 ]
 autoapi_dirs = ["../src"]
 
