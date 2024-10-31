@@ -50,34 +50,33 @@ def make_move(board, row, col, player):
         return True
     return False
 
+
 def check_winner(board):
-    def check_winner(board):
-        """
-        Checks the current board for a winner.
+    """
+    Checks the current board for a winner.
 
-        Parameters
-        ----------
-        board : list of list of str
-            The current game board.
+    Parameters
+    ----------
+    board : list of list of str
+        The current game board.
 
-        Returns
-        -------
-        str or None
-            'X' or 'O' if there is a winner, 'Draw' if it's a draw, or None if the game is ongoing.
+    Returns
+    -------
+    str or None
+        'X' or 'O' if there is a winner, 'Draw' if it's a draw, or None if the game is ongoing.
 
-        Examples
-        --------
-        >>> board = [['X', 'X', 'X'], [' ', 'O', ' '], ['O', ' ', ' ']]
-        >>> check_winner(board)
-        'X'
-        >>> board = [['X', 'O', 'X'], ['O', 'X', 'O'], ['O', 'X', 'O']]
-        >>> check_winner(board)
-        'Draw'
-        >>> board = [['X', ' ', ' '], [' ', 'O', ' '], [' ', ' ', ' ']]
-        >>> check_winner(board)
-        None
-        """
-    # Check rows, columns, and diagonals
+    Examples
+    --------
+    >>> board = [['X', 'X', 'X'], [' ', 'O', ' '], ['O', ' ', ' ']]
+    >>> check_winner(board)
+    'X'
+    >>> board = [['X', 'O', 'X'], ['O', 'X', 'O'], ['O', 'X', 'O']]
+    >>> check_winner(board)
+    'Draw'
+    >>> board = [['X', ' ', ' '], [' ', 'O', ' '], [' ', ' ', ' ']]
+    >>> check_winner(board)
+    None
+    """
     lines = board + list(zip(*board))  # Rows and columns
     lines.append([board[i][i] for i in range(3)])  # Main diagonal
     lines.append([board[i][2 - i] for i in range(3)])  # Anti-diagonal
@@ -93,6 +92,7 @@ def check_winner(board):
         return 'Draw'
 
     return None
+
 
 
 def reset_game():

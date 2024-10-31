@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tictactoe-xm2312"
-version = "0.1.0"
+version = "0.1.2"
 description = "we are adding the tictactoe functions"
 authors = ["XuanYing Mao"]
 license = "MIT"
@@ -16,6 +16,7 @@ myst-nb = "^1.1.2"
 sphinx-autoapi = "^3.3.3"
 sphinx-rtd-theme = "^3.0.1"
 pytest = "^8.3.3"
+twine = "^5.1.1"
 
 [build-system]
 requires = ["poetry-core"]
